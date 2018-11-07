@@ -16,4 +16,5 @@ int main() {
 	for (short int a = 0; a < elementi; a++) {
 		std::cout << vettore[a] << std::endl;
 	}
+	return 0;
 }
