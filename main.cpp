@@ -14,6 +14,6 @@ int main() {
 	std::sort(vettore, vettore + elementi);
 	std::cout << "Vettore ordinato:" << std::endl;
 	for (short int a = 0; a < elementi; a++) {
-			std::cout << vettore[a] << std::endl;
+		std::cout << vettore[a] << std::endl;
 	}
 }
