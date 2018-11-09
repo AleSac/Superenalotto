@@ -41,7 +41,10 @@ double vincitorispeciali(short int h) {
 	return num_vincitorispec[h];
 }
 
-long int vincitori(short int l) {
+//in realtà non sarebbe necessario calcolare il numero di vincitori per le categorie il cui montepremi non è 
+//in funzione di quest'ultimo, ma secondo me se alla fine viene mostrato il numero totale di vincitori fa più bello.
+
+long int vincitori(short int l) {  
 	long int num_vincitori[12];
 	long int num_schedine = ((rand() % 4999 + 5000) * 10000);
 	for (short int a = 0; a < 12; a++) {
@@ -108,6 +111,8 @@ long int vincite(short int k) {
 	}
 	return montepremi[k];
 }
+
+//attualmente, sceglie una categoria a caso e stampa a video il montepremi
 
 int main() {
 	srand(time(NULL));
