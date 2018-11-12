@@ -6,17 +6,17 @@
 #include <math.h>
 
 short int estrazione() {
-	short int num_estratto = rand() % 90;
+	short int num_estratto = rand() % 90 + 1;
 	return num_estratto;
 }
 
 double vincitorispeciali(short int h) {
 	short int num_vincitorispec[3];
 	for (short int a = 0; a < 3; a++) {
-		int k = rand() % RAND_MAX;  //RAND_MAX = 32767
+		int k = rand() % RAND_MAX + 1;  //RAND_MAX = 32767
 		int k2;
 		if (a == 0) {  //6
-			k2 = k * (rand() % 19001);
+			k2 = k * (rand() % 19001 + 1);
 			if (k2 == 1) {
 				num_vincitorispec[a] = 1;
 			}
@@ -25,7 +25,7 @@ double vincitorispeciali(short int h) {
 			}
 		}
 		else if (a == 1) {  //5 e Superstar
-			k2 = k * (rand() % 3433);
+			k2 = k * (rand() % 3433 + 1);
 			if (k2 == 0) {
 				num_vincitorispec[a] = 1;
 			}
@@ -34,8 +34,8 @@ double vincitorispeciali(short int h) {
 			}
 		}
 		else {  //6 e Superstar
-			k2 = k * (rand() % RAND_MAX);
-			double k3 = fabsl(k2 * (rand() % 52));  //per una ragione a me non chiara a volte k3 < 0
+			k2 = k * (rand() % RAND_MAX + 1);
+			double k3 = fabsl(k2 * (rand() % 52 + 1));  //per una ragione a me non chiara a volte k3 < 0
 			if (k3 == 1) {
 				num_vincitorispec[a] = 1;
 			}
